@@ -1,0 +1,505 @@
+/* =======================================================
+   MEDIA QUERIES – Full Site
+   Breakpoints: 1300 | 1199 | 992/991 | 768/767 | 575
+   ======================================================= */
+
+
+/* ══════════════════════════════════════════
+   ① ≤ 1300px  –  Wide tablets / small laptops
+   ══════════════════════════════════════════ */
+@media (max-width: 1300px) {
+
+    /* --- Home --- */
+    .home {
+        min-height: 100vh;
+    }
+
+    .info {
+        padding: 7px 14px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+    }
+
+    .home .titel h1 {
+        width: 300px;
+        font-size: 32px;
+        line-height: 39px;
+        font-weight: 900;
+        margin-bottom: 21px;
+    }
+
+    .home .titel h1 span {
+        margin-bottom: 15px;
+    }
+
+    .there-span {
+        margin-top: 30px;
+    }
+
+    .home .rigth-side figure {
+        width: 100%;
+    }
+
+    .home .rigth-side .hero-card::before {
+        width: 80%;
+        height: 75%;
+        left: 50%;
+        transform: translateX(-50%) rotate(4deg);
+    }
+
+    .top-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .bottom-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .group {
+        padding: 28px;
+        width: 300px;
+    }
+
+    .group h2 {
+        font-size: 18px;
+    }
+
+    .group p {
+        font-size: 14px;
+        width: 200px;
+    }
+}
+
+
+/* ══════════════════════════════════════════
+   ② ≤ 1199px  –  Large tablets
+   ══════════════════════════════════════════ */
+@media (max-width: 1199px) {
+
+    /* --- Comprehensive – 3 cols --- */
+    .comprehensive .row.gap-4 {
+        --bs-gutter-x: 1rem;
+    }
+
+    .comprehensive .group {
+        min-width: calc(33.33% - 1rem);
+    }
+
+    /* --- Cutting-Edge – tab labels smaller --- */
+    .tab-nav label {
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+
+    #tab-fe:checked   ~ .tab-nav label[for="tab-fe"],
+    #tab-be:checked   ~ .tab-nav label[for="tab-be"],
+    #tab-mob:checked  ~ .tab-nav label[for="tab-mob"],
+    #tab-cloud:checked~ .tab-nav label[for="tab-cloud"],
+    #tab-db:checked   ~ .tab-nav label[for="tab-db"] {
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+
+    /* --- card desc – remove fixed width --- */
+    .card-desc { width: auto; }
+
+    /* --- Ready to Transform --- */
+    .ready {
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    .form-side {
+        padding: 36px;
+    }
+
+    .info-side {
+        width: 280px;
+    }
+}
+
+
+/* ══════════════════════════════════════════
+   ③ ≤ 992px  –  Tablets
+   ══════════════════════════════════════════ */
+@media (max-width: 992px) {
+
+    /* --- Mega Menu --- */
+    .mega-menu {
+        position: static !important;
+        transform: none !important;
+        width: 100% !important;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        padding: 1rem 0;
+        margin-top: 0;
+    }
+
+    .col-label {
+        padding: 0 12px;
+    }
+
+    .mega-item {
+        padding: 8px 12px;
+        margin-bottom: 0.5rem;
+    }
+
+    .help-card {
+        margin: 1rem 12px;
+    }
+
+    .right-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .right-nav a {
+        width: 100%;
+    }
+
+    /* --- Comprehensive – 2 cols grid --- */
+    .comprehensive {
+        min-height: auto;
+    }
+
+    .comprehensive .row.gap-4 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem !important;
+    }
+
+    .comprehensive .group {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .group p { width: 100%; }
+
+    .text .comper {
+        font-size: 26px;
+    }
+
+    .group {
+        padding: 28px;
+    }
+
+    /* --- Cutting-Edge – tabs wrap --- */
+    .tab-nav > div {
+        gap: 0 !important;
+        flex-wrap: wrap;
+    }
+
+    .tab-nav label {
+        padding: 10px 16px;
+        font-size: 14px;
+        flex: 0 0 auto;
+    }
+
+    #tab-fe:checked   ~ .tab-nav label[for="tab-fe"],
+    #tab-be:checked   ~ .tab-nav label[for="tab-be"],
+    #tab-mob:checked  ~ .tab-nav label[for="tab-mob"],
+    #tab-cloud:checked~ .tab-nav label[for="tab-cloud"],
+    #tab-db:checked   ~ .tab-nav label[for="tab-db"] {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    /* Cards – 2 per row */
+    .section .row .col-md-4 {
+        width: 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    /* --- Ready to Transform --- */
+    .ready {
+        flex-direction: column !important;
+        gap: 0;
+    }
+
+    .form-side {
+        border-radius: 20px 20px 0 0;
+        padding: 32px 28px;
+        width: 100%;
+    }
+
+    .info-side {
+        width: 100%;
+        border-radius: 0 0 20px 20px;
+        padding: 32px 28px;
+    }
+
+    .budget-grid {
+        gap: .5rem;
+    }
+
+    .budget-btn {
+        padding: 12px 8px;
+    }
+
+    /* --- Footer --- */
+    footer .container > .d-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+
+    footer .d-flex.align-items-center.gap-2 {
+        justify-content: flex-start;
+    }
+}
+
+
+/* ══════════════════════════════════════════
+   ④ ≤ 768px  –  Large phones
+   ══════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+    /* --- Comprehensive – 1 col --- */
+    .comprehensive .row.gap-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .comprehensive .text .comper {
+        font-size: 34px;
+        line-height: 1.3;
+    }
+
+    .comprehensive .text p {
+        font-size: 16px;
+    }
+
+    /* --- Cutting-Edge --- */
+    .cutting .text .comper {
+        font-size: 32px;
+        line-height: 1.3;
+    }
+
+    .cutting .text p {
+        font-size: 16px;
+    }
+
+    /* Tab labels – scrollable row */
+    .tab-nav {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .tab-nav > div {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        width: max-content;
+    }
+
+    .tab-nav label {
+        padding: 10px 14px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    #tab-fe:checked   ~ .tab-nav label[for="tab-fe"],
+    #tab-be:checked   ~ .tab-nav label[for="tab-be"],
+    #tab-mob:checked  ~ .tab-nav label[for="tab-mob"],
+    #tab-cloud:checked~ .tab-nav label[for="tab-cloud"],
+    #tab-db:checked   ~ .tab-nav label[for="tab-db"] {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    /* Cards – 1 per row */
+    .section .row .col-md-4 {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .section-title { font-size: 20px; }
+
+    /* --- Ready to Transform --- */
+    .card-wrap { flex-direction: column; }
+
+    .card-wrap .text .comper {
+        font-size: 32px;
+        line-height: 1.3;
+    }
+
+    .form-side {
+        padding: 24px 20px;
+    }
+
+    .form-side h2 {
+        font-size: 20px;
+    }
+
+    .form-side .subtitle {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    /* Name / email rows – stack to 1 col */
+    .form-side .row.g-3 .col-6 {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Budget – 1 column */
+    .budget-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-side {
+        width: 100%;
+        padding: 24px 20px;
+    }
+
+    .info-side h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .feature-item {
+        margin-bottom: 20px;
+    }
+
+    /* --- Footer --- */
+    .footer-tagline {
+        max-width: 100%;
+    }
+
+    footer .d-flex.align-items-start.gap-3 {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+
+/* ══════════════════════════════════════════
+   ⑤ ≤ 575px  –  Small phones
+   ══════════════════════════════════════════ */
+@media (max-width: 575px) {
+
+    /* --- Comprehensive --- */
+    .comprehensive .text .comper {
+        font-size: 26px;
+    }
+
+    .comprehensive .group {
+        padding: 20px;
+    }
+
+    /* --- Cutting-Edge --- */
+    .cutting .text .comper {
+        font-size: 24px;
+    }
+
+    .content.container { padding: 0 12px !important; }
+
+    .db-card { padding: 20px !important; }
+
+    .icon-box {
+        width: 52px;
+        height: 52px;
+        font-size: 1.3rem;
+    }
+
+    .card-name { font-size: 17px; }
+    .card-desc  { font-size: 14px; }
+
+    .tech-badge {
+        font-size: 11px;
+        padding: 3px 9px;
+    }
+
+    /* --- Ready to Transform --- */
+    .card-wrap {
+        border-radius: 0;
+    }
+
+    .card-wrap .text {
+        padding: 0 16px;
+    }
+
+    .card-wrap .text .comper {
+        font-size: 28px;
+    }
+
+    .card-wrap .text p {
+        font-size: 14px;
+    }
+
+    .form-side {
+        padding: 20px 16px;
+        border-radius: 0;
+    }
+
+    .form-side h2 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    label.field-label {
+        font-size: 13px;
+    }
+
+    .form-control,
+    .form-select {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .budget-btn .amount {
+        font-size: 14px;
+    }
+
+    .btn-cta {
+        font-size: 0.9rem;
+        padding: 16px 0;
+    }
+
+    .info-side {
+        border-radius: 0;
+        padding: 20px 16px;
+    }
+
+    .info-side h3 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .feat-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 0.95rem;
+    }
+
+    .feat-body h6 { font-size: 14px; }
+    .feat-body p  { font-size: 13px; }
+
+    .contact-item {
+        font-size: 14px;
+    }
+
+    /* --- Footer --- */
+    footer .container.py-4 {
+        padding-top: 1.25rem !important;
+        padding-bottom: 1.25rem !important;
+    }
+
+    .logo-name       { font-size: 1.1rem; }
+    .footer-tagline  { font-size: 0.82rem; }
+    .footer-copy     { font-size: 0.8rem; }
+    .footer-made     { font-size: 0.76rem; }
+
+    .social-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+}
