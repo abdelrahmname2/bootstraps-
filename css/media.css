@@ -503,3 +503,10 @@
         font-size: 0.9rem;
     }
 }
+
+/* testimonials  */
+@media (min-width: 992px) {
+    .testimonials .testimonial-card {
+        width: 75% !important;
+    }
+}
